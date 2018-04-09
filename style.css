@@ -1,0 +1,166 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#headerimage {
+    width: 100%;
+}
+
+img {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 40px;
+    font-family: Calibri;
+    font-size: 30px;
+    
+}
+
+#listcontainer {
+    margin-top: 60px;
+}
+
+#contentlist {
+    list-style: unset;
+}
+
+li.list {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-family: Calibri;
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: Roboto Slab;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    color: #262626;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: lightslategrey;
+}
+
+h3 {
+    font-family: Roboto Slab;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    color: #262626;
+    margin: 20px;
+}
+
+p {
+    font-family: Calibri;
+    font-size: 25px;
+    color: #2d2d2d;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+}
+
+p1 {
+    font-family: Calibri;
+    font-size: 25px;
+    color: #2d2d2d;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+}
+
+p.hover:hover {
+    color: lightslategrey;
+}
+
+div.content {
+    border-radius: 25px;
+    background-color: #efefef;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}
+
+.bubble {
+    border-radius: 15px;
+    background-color: white;
+    display: inline;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.imagetext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagetitle {
+    top: 15%;
+    color: white;
+    font-weight: 300;
+    font-size: 80px;
+}
+
+#titlediv {
+    color: black;
+    width: 500px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.center {
+    text-align: center;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 23px;
+    color: antiquewhite;
+    background-color: rgb(45, 45, 45);
+    border-radius: 15px;
+    text-align: left;
+    line-height: 40px;
+    padding: 15px;
+}
+
+span.selector {
+    color: #e3ceab;
+}
+
+span.property {
+    color: darkorange;
+}
+
+span.value {
+    color: mediumslateblue;
+}
