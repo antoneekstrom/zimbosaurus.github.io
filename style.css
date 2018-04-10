@@ -31,11 +31,21 @@ li {
     background-color: white;
     padding: 10px;
     border-radius: 15px;
-    width: 40%;
     display: inline-block;
-    margin: 20px;
+    margin: 5px;
     font-family: Calibri;
     font-size: 30px;
+}
+
+.minimize {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 h1 {
@@ -45,6 +55,7 @@ h1 {
 }
 
 h2 {
+    margin-top: 10px;
     font-family: Roboto Slab;
     font-weight: 600;
     font-size: 40px;
@@ -97,6 +108,7 @@ p.hover:hover {
 }
 
 div.content {
+    position: relative;
     border-radius: 25px;
     background-color: #efefef;
     display: inline-block;
@@ -140,6 +152,27 @@ div.content {
     width: 500px;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+#slidehandle {
+    position: fixed;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #efefef;
+    top: 50px;
+}
+
+#sidebar {
+    top: 50px;
+    width: 250px;
+    height: 600px;
+    background-color: #efefef;
+    border-bottom-right-radius: 15px;
+    position: fixed;
 }
 
 .center {

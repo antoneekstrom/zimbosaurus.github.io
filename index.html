@@ -2,7 +2,9 @@
 <head>
     <title>Anton</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -15,8 +17,18 @@
         </div>
         <img src="IMG_7818.jpg" id="headerimage">
     </div>
+    <div id="sidebar">
+        <h2>Navigation</h2>
+        <div><a href="#ommig"><li class="list">Om mig</li></a></div>
+        <div><a href="#projekt"><li class="list">Andra projekt</li></a></div>
+        <div><a href="#katter"><li class="list">Katter</li></a></div>
+        <div><a href="#kod"><li class="list">Uppbyggnad</li></a></div>
+        <div><a href="#typsnitt"><li class="list">Typsnitt</li></a></div>
+    </div>
+    <div id="slidehandle"></div>
     <div class="content" id="listcontainer">
         <h2>Innehåll</h2>
+        <div class="minimize"></div>
         <ul id="contentlist">
             <div><a href="#ommig"><li class="list">Om mig</li></a></div>
             <div><a href="#projekt"><li class="list">Andra projekt</li></a></div>
@@ -27,11 +39,13 @@
     </div>
     <div class="content" id="container1">
         <h2 id="ommig">Det är jag som är Anton Ekström</h2>
+        <div class="minimize"></div>
         <p>Jag är Anton och jag är en människa som heter Anton och har en hemsida. Jag har en familj som består av mina två
         föräldrar som heter Dubravko och Anna. Jag själv heter Anton Martin Ekström. Jag föddes den första juni år 2001. I familjen finns det också tre stycken kattdjur, de heter Vincent, Alice och Cajsa.</p>
     </div>
     <div class="content">
         <h2 id="projekt">Mina andra projekt</h2>
+        <div class="minimize"></div>
         <p1>Här finns andra av mina projekt som jag har gjort:</p1>
         <div class="items"><a href="https://github.com/zimbosaurus/adventureboi" target="_blank"><p class="center bubble hover">adventureboi</p></a></div>
          <div class="items"><a href="https://github.com/zimbosaurus/epic_title_generator" target="_blank"><p class="center bubble hover">epic word generator</p></a></div>
@@ -39,6 +53,7 @@
     </div>
     <div class="content">
         <h2 id="kod">Uppbyggnad</h2>
+        <div class="minimize"></div>
         <p1>Här är CSS koden för dessa "lådor" som texten och bilderna finns i på den här sidan.</p1>
         <div class="code"><span class="selector">div.content</span> {<br>
         &emsp;&emsp;<span class="property">border-radius</span>: <span class="value">25px</span>;<br>
@@ -54,6 +69,7 @@
     </div>
     <div class="content">
         <h2 id="typsnitt">Typsnitt</h2>
+        <div class="minimize"></div>
         <p1>Här finns de 3 typsnitten som jag använder på den här sidan:</p1>
         <h2>Roboto Slab</h2>
         <p>Roboto Slab använder jag för subtitlar i bubblor. Jag har "bäddat in" det här typsnittet från Google Fonts som du 
@@ -66,11 +82,12 @@
     </div>
     <div class="content">
         <h2 id="katter">Mina katter<br></h2>
+        <div class="minimize"></div>
         <h2>Vincent</h2>
         <img>
         <h2>Alice</h2>
         <img>
         <h2>Kajsa</h2>
-        <img>
+        <img src="https://lh3.googleusercontent.com/Xr6YBHWcWBOwCR1nRn3-X5Wpb-vh2v7BZ-9T6Zq4bwpJtyPVjZeaShjsxmNpIhPdDj65wE2k9iwXE8M5SfKu_mzaETGnsgr7GcTmkpmu0Qoi81r4S9PwtBbIB4iYpG3JdFFCieJDtwGM0aKMlQq_0dpUmp82pfeHC7g1wXXWfXJzrp-hmDRV0KPlOPhPpvig6-RTd_7twN-rfYK0hjwUxkoAUJpZKH8e-ozprdoJlhGz9pLySRByKmjmsbknieVt8yPw9f35keTBzw0Z98ZqUbh94XjVJ-5I6U9CNZl4vkH5iiBhEl-KUcwZW7h04V58p64i0dPSYnjXR_0HJ7qVTMkUmIGbwuUYuen-U9U4LqMKmxynWc13OPBm7RGDRkFiYpZggkP0lKoekzRab2GQVOJYpoaB-Q2tbH9MtpRjW17rvJgzG35wB0QUFnlPZYOBP0qTPdtZ3i_CMvjbmHHwrbtl7DxEkak3yIHzWHTFk9WGxsB8t8MLe-qPaR7HJMrXy6y1YbAUD_gzAnCq4WTziRRQHappww3NkbxXpmdTdSCvrjLf-68zVNXtbclO_1m5Y2dcxDVQ7zTTX8CBSNes1Jg0W7yRD2oKjgq-axf0=w665-h885-no">
     </div>
 </body>
