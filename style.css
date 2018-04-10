@@ -18,25 +18,24 @@ ul {
     margin: 0;
 }
 
+.items   {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#picture {
+    margin-bottom: 40px;
+}
+
 li {
-    margin: 40px;
-    font-family: Calibri;
-    font-size: 30px;
-    
-}
-
-#listcontainer {
-    margin-top: 60px;
-}
-
-#contentlist {
-    list-style: unset;
-}
-
-li.list {
     background-color: white;
     padding: 10px;
     border-radius: 15px;
+    width: 40%;
+    display: inline-block;
+    margin: 20px;
+    font-family: Calibri;
+    font-size: 30px;
 }
 
 h1 {
@@ -80,6 +79,7 @@ p {
     text-align: center;
     display: inline-block;
     text-align: left;
+    width: 80%;
 }
 
 p1 {
@@ -99,13 +99,17 @@ p.hover:hover {
 div.content {
     border-radius: 25px;
     background-color: #efefef;
-    margin-left: 300px;
-    margin-right: 300px;
+    display: inline-block;
+    width: 50%;
     margin-bottom: 20px;
-    padding: 10px;
+    padding-top: 10px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 40px;
+}
+
+.intextlink {
+    color: grey;
 }
 
 .bubble {
@@ -142,6 +146,13 @@ div.content {
     text-align: center;
 }
 
+#monospace {
+    font-family: monospace;
+    font-size: 45px;
+    margin: 0;
+    text-align: center;
+}
+
 .code {
     font-family: monospace;
     font-size: 23px;
@@ -149,6 +160,8 @@ div.content {
     background-color: rgb(45, 45, 45);
     border-radius: 15px;
     text-align: left;
+    display: inline-block;
+    width: 70%;
     line-height: 40px;
     padding: 15px;
 }

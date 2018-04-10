@@ -3,11 +3,10 @@
     <title>Anton</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div>
+    <div id="picture">
         <div class="imagetext">
             <div id="titlediv" class="content center">
                 <h1 class="center">Välkommen till Anton's jättehäftiga hemsida</h1>
@@ -19,46 +18,54 @@
     <div class="content" id="listcontainer">
         <h2>Innehåll</h2>
         <ul id="contentlist">
-            <li class="list">Om mig</li>
-            <li class="list">Andra projekt</li>
-            <li class="list">Katter</li>
-            <li class="list">Kod</li>
+            <div><a href="#ommig"><li class="list">Om mig</li></a></div>
+            <div><a href="#projekt"><li class="list">Andra projekt</li></a></div>
+            <div><a href="#katter"><li class="list">Katter</li></a></div>
+            <div><a href="#kod"><li class="list">Uppbyggnad</li></a></div>
+            <div><a href="#typsnitt"><li class="list">Typsnitt</li></a></div>
         </ul>
     </div>
     <div class="content" id="container1">
-        <h2>Det är jag som är Anton Ekström</h2>
+        <h2 id="ommig">Det är jag som är Anton Ekström</h2>
         <p>Jag är Anton och jag är en människa som heter Anton och har en hemsida. Jag har en familj som består av mina två
         föräldrar som heter Dubravko och Anna. Jag själv heter Anton Martin Ekström. Jag föddes den första juni år 2001. I familjen finns det också tre stycken kattdjur, de heter Vincent, Alice och Cajsa.</p>
     </div>
     <div class="content">
-        <h2>Mina andra projekt</h2>
+        <h2 id="projekt">Mina andra projekt</h2>
         <p1>Här finns andra av mina projekt som jag har gjort:</p1>
-        <ul>
-            <li><a href="https://github.com/zimbosaurus" target="_blank"><p class="center bubble hover">github</p></a></li>
-            <li><a href="https://minecraftadventure.000webhostapp.com" target="_blank"><p class="center bubble hover">minecraft adventure</p></a></li>
-        </ul>
+        <div class="items"><a href="https://github.com/zimbosaurus/adventureboi" target="_blank"><p class="center bubble hover">adventureboi</p></a></div>
+         <div class="items"><a href="https://github.com/zimbosaurus/epic_title_generator" target="_blank"><p class="center bubble hover">epic word generator</p></a></div>
+        <div class="items"><a href="https://minecraftadventure.000webhostapp.com" target="_blank"><p class="center bubble hover">minecraft adventure</p></a></div>
     </div>
     <div class="content">
-        <h2>Uppbyggnad</h2>
+        <h2 id="kod">Uppbyggnad</h2>
         <p1>Här är CSS koden för dessa "lådor" som texten och bilderna finns i på den här sidan.</p1>
         <div class="code"><span class="selector">div.content</span> {<br>
         &emsp;&emsp;<span class="property">border-radius</span>: <span class="value">25px</span>;<br>
         &emsp;&emsp;<span class="property">background-color</span>: <span class="value">#efefef</span>;<br>
-        &emsp;&emsp;<span class="property">margin-left</span>: <span class="value">300px</span>;<br>
-        &emsp;&emsp;<span class="property">margin-right</span>: <span class="value">300px</span>;<br>
+        &emsp;&emsp;<span class="property">display:</span>: <span class="value">inline-block</span>;<br>
+        &emsp;&emsp;<span class="property">width</span>: <span class="value">50%</span>;<br>
         &emsp;&emsp;<span class="property">margin-bottom</span>: <span class="value">20px</span>;<br>
-        &emsp;&emsp;<span class="property">padding</span>: <span class="value">10px</span>;<br>
+        &emsp;&emsp;<span class="property">padding-top</span>: <span class="value">10px</span>;<br>
         &emsp;&emsp;<span class="property">padding-left</span>: <span class="value">50px</span>;<br>
         &emsp;&emsp;<span class="property">padding-right</span>: <span class="value">50px</span>;<br>
         &emsp;&emsp;<span class="property">padding-bottom</span>: <span class="value">40px</span>;<br>}
         </div>
     </div>
     <div class="content">
-        <h2>Typsnitt</h2>
-        <p1>Det här är de 3 typsnitten som jag använder på den här sidan.</p1>
+        <h2 id="typsnitt">Typsnitt</h2>
+        <p1>Här finns de 3 typsnitten som jag använder på den här sidan:</p1>
+        <h2>Roboto Slab</h2>
+        <p>Roboto Slab använder jag för subtitlar i bubblor. Jag har "bäddat in" det här typsnittet från Google Fonts som du 
+        hittar <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" class="intextlink">här</a>.</p>
+        <h1 style="margin: 5px;">Calibri</h1>
+        <p>Calibri är ett fint typsnitt som jag använder för titlar, brödtext, listor och länkar. Den kommer inbyggt i Windows.</p>
+        <p id="monospace">Monospace</p>
+        <p>Monospace är av typen Sans-Serif och kommer också med Windows. Den är tydlig och enkel att läsa, så därför använder 
+        jag den för kod bitar.</p>
     </div>
     <div class="content">
-        <h2>Mina katter<br></h2>
+        <h2 id="katter">Mina katter<br></h2>
         <h2>Vincent</h2>
         <img>
         <h2>Alice</h2>
