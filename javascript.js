@@ -1,3 +1,14 @@
+function addIndex(div) {
+        
+    $(".title").each(function(i, obj) {
+            
+        var anchor = $("<a></a>");
+        var name = $("<p></p>");
+        name.html(obj[i].html());
+        div.add(name);
+    });
+}
+
 $(document).ready(function() {
     var sidebar_visible = false;
     var sidebar_width = $("#sidebar").outerWidth();
