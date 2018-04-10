@@ -27,9 +27,57 @@ ul {
     margin-bottom: 40px;
 }
 
-.title {
-    
-} 
+.codecontent {
+    position: relative;
+    border-radius: 25px;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    font-family: monospace;
+    font-size: 23px;
+    color: antiquewhite;
+    background-color: rgb(45, 45, 45);
+    text-align: left;
+    line-height: 40px;
+}
+
+.singlecontent {
+    margin: 10px;
+    padding: 0;
+    position: relative;
+    border-radius: 25px;
+    display: inline-block;
+    background-color: #efefef;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.keyword {
+    color: deepskyblue;
+}
+
+.codetitle {
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+
+.codedescription {    
+    font-family: monospace;
+    font-size: 23px;
+    color: antiquewhite;
+    background-color: rgb(45, 45, 45);
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 70%;
+    line-height: 40px;
+    padding: 5px;
+}
 
 li {
     background-color: white;

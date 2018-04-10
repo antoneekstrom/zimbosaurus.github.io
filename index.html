@@ -56,16 +56,17 @@
         <div class="minimize"></div>
         <p1>Här är CSS koden för dessa "lådor" som texten och bilderna finns i på den här sidan.</p1>
         <div class="code"><span class="selector">div.content</span> {<br>
-        &emsp;&emsp;<span class="property">border-radius</span>: <span class="value">25px</span>;<br>
-        &emsp;&emsp;<span class="property">background-color</span>: <span class="value">#efefef</span>;<br>
-        &emsp;&emsp;<span class="property">display:</span>: <span class="value">inline-block</span>;<br>
-        &emsp;&emsp;<span class="property">width</span>: <span class="value">50%</span>;<br>
-        &emsp;&emsp;<span class="property">margin-bottom</span>: <span class="value">20px</span>;<br>
-        &emsp;&emsp;<span class="property">padding-top</span>: <span class="value">10px</span>;<br>
-        &emsp;&emsp;<span class="property">padding-left</span>: <span class="value">50px</span>;<br>
-        &emsp;&emsp;<span class="property">padding-right</span>: <span class="value">50px</span>;<br>
-        &emsp;&emsp;<span class="property">padding-bottom</span>: <span class="value">40px</span>;<br>}
+            &emsp;&emsp;<span class="property">border-radius</span>: <span class="value">25px</span>;<br>
+            &emsp;&emsp;<span class="property">background-color</span>: <span class="value">#efefef</span>;<br>
+            &emsp;&emsp;<span class="property">display:</span>: <span class="value">inline-block</span>;<br>
+            &emsp;&emsp;<span class="property">width</span>: <span class="value">50%</span>;<br>
+            &emsp;&emsp;<span class="property">margin-bottom</span>: <span class="value">20px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-top</span>: <span class="value">10px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-left</span>: <span class="value">50px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-right</span>: <span class="value">50px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-bottom</span>: <span class="value">40px</span>;<br>}
         </div>
+        <p>Ovanför ser du hur jag har fått till sidan på det här sättet. Jag använder mig mest av variationer av vit/grå men ibland mörkgrå för mer kontrast. Mest var den här kodbubblan till för att pröva att göra en sådan här mörk bubbla som jag hoppades skulle se rätt fint ut, och det blev rätt fint så jag är nöjd.</p>
     </div>
     <div class="content">
         <h2 id="typsnitt" class="title">Typsnitt</h2>
@@ -79,6 +80,24 @@
         <p id="monospace">Monospace</p>
         <p>Monospace är av typen Sans-Serif och kommer också med Windows. Den är tydlig och enkel att läsa, så därför använder 
         jag den för kod bitar.</p>
+    </div>
+    <div class="singlecontent codetitle">
+        <h2 class="singlecontent codetitle">Javascript och jQuery</h2>
+        <p class="codedescription">Script för navigationsmenyn till vänster.</p>
+    </div>
+    <div class="codecontent">$(<span class="value">"#slidehandle"</span>).<span class="property">click</span>(
+           <span class="keyword">function</span>() {<br>
+           &emsp;&emsp;<span class="keyword">if</span> (<span class="property">sidebar_visible</span> == 
+           <span class="value">true</span>) {<br>
+           &emsp;&emsp;&emsp;&emsp;<span class="property">sidebar_visible</span> = <span class="value">false</span>;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#sidebar"</span>).<span class="property">animate</span>({"left" : -sidebar_width}) ;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#slidehandle"</span>).<span class="property">animate</span>({"left" : "0"}) ;<br>
+           &emsp;&emsp;} <span class="keyword">else</span> {<br>
+           &emsp;&emsp;&emsp;&emsp;<span class="property">sidebar_visible</span> = <span class="value">true</span>;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#sidebar"</span>).<span class="property">animate</span>({"left" : "0"}) ;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#slidehandle"</span>).<span class="property">animate</span>({"left" : sidebar_width}) ;<br>
+            }
+            });
     </div>
     <div class="content">
         <h2 id="katter" class="title">Mina katter<br></h2>

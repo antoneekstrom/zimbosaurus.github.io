@@ -38,7 +38,7 @@ $(document).ready(function() {
                 $(m).removeClass("minimized");
                 $(p).children("h2").animate({"margin-top" : "10px"});
                 $(p).animate({height : "auto", "padding-bottom" : "40px"});
-                $(m).parent().children().not(m).not("h2").show();
+                $(m).parent().children().not(m).not(".title").show();
                 
             }
             
@@ -50,7 +50,7 @@ $(document).ready(function() {
                 $(m).addClass("minimized");
                 $(p).children("h2").animate({"margin-top" : "0"});
                 $(p).animate({height : "auto", "padding-bottom" : "10px"});
-                $(this).parent().children().not(m).not("h2").hide();
+                $(this).parent().children().not(m).not(".title").hide();
                 
             }
             
