@@ -6,7 +6,7 @@ function addIndex(div) {
         var name = $("<p></p>");
         name.html(obj[i].html());
         div.add(name);
-    });
+    }); 
 }
 
 $(document).ready(function() {
