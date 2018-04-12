@@ -33,6 +33,14 @@ ul {
     margin-bottom: 40px;
 }
 
+p.codetext {
+    text-align: left;
+    font-family: monospace;
+    font-size: 23px;
+    color: antiquewhite;
+    width: 100%;
+}
+
 .codecontent {
     position: relative;
     border-radius: 25px;
