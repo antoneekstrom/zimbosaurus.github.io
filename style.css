@@ -225,6 +225,7 @@ div.content {
 }
 
 #titlediv {
+    z-index: 1000;
     color: black;
     width: 500px;
     padding: 40px;
@@ -232,6 +233,7 @@ div.content {
 }
 
 #slidehandle {
+    z-index: 100;
     position: fixed;
     left: 0px;
     height: 50px;
