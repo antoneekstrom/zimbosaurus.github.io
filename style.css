@@ -87,6 +87,14 @@ li {
     margin: 5px;
     font-family: Calibri;
     font-size: 30px;
+    
+    transition-duration: 0.2s;
+    transition-property: padding, margin;
+}
+
+li:hover {
+    padding: 14px;
+    margin: 1px;
 }
 
 .minimize {
@@ -98,6 +106,14 @@ li {
     background-color: white;
     border-radius: 15px;
     cursor: pointer;
+    transition-property: width, height;
+    transition-duration: 0.2s;
+}
+
+.minimize:hover {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
 }
 
 h1 {
@@ -180,9 +196,18 @@ div.content {
     border-radius: 15px;
     background-color: white;
     display: inline;
-    padding: 15px;
+    padding: 10px;
     font-size: 30px;
     font-weight: 500;
+    margin: 10px;
+    
+    transition-property: padding, margin;
+    transition-duration: 0.2s;
+}
+
+.bubble:hover {
+    padding: 14px;
+    margin: 6px;
 }
 
 .imagetext {
@@ -216,6 +241,14 @@ div.content {
     border-bottom-right-radius: 15px;
     background-color: #efefef;
     top: 50px;
+    
+    transition-duration: 0.2s;
+    transition-property: height, width;
+}
+
+#slidehandle:hover {
+    height: 60px;
+    width: 60px;
 }
 
 #sidebar {
