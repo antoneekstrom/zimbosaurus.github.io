@@ -110,7 +110,7 @@ li {
     border-radius: 15px;
     display: inline-block;
     margin: 5px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Helvetica, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 30px;
     
     transition-duration: 0.2s;
@@ -142,7 +142,7 @@ li:hover {
 }
 
 h1 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Helvetica, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: lighter;
     font-size: 50px;
 }
@@ -176,7 +176,7 @@ h3 {
 }
 
 p {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Helvetica, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 25px;
     color: #2d2d2d;
     font-weight: 500;
@@ -187,7 +187,7 @@ p {
 }
 
 p1 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Helvetica, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 25px;
     color: #2d2d2d;
     font-weight: 500;
