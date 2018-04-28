@@ -160,6 +160,7 @@ h2 {
 a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 a:hover {
@@ -322,3 +323,26 @@ span.property {
 span.value {
     color: mediumslateblue;
 }
+
+#pagenav {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -175px;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
