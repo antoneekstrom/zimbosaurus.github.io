@@ -144,11 +144,15 @@ $(document).ready(function() {
     xhttp.onload = function () {
         loadContent("");
         contentWidth();
+<<<<<<< HEAD
     $(".status").click(function () {
         var s = $(this).attr("id");
         console.log(s);
     });
     }
+=======
+    }, 5);
+>>>>>>> 9a9e5c123b53dfd326187e8b077876f2f2431f34
     
 });
 
