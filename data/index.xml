@@ -1,0 +1,28 @@
+<page>
+    <content>
+        <title id="Om mig">Det är jag som är Anton Ekström</title>
+        <body>Jag är Anton och jag är en människa som heter Anton och har en hemsida. Jag har en familj som består av mina två
+        föräldrar som heter Dubravko och Anna. Jag själv heter Anton Martin Ekström. Jag föddes den första juni år 2001. I familjen finns det också tre stycken kattdjur, de heter Vincent, Alice och Cajsa.</body>
+    </content>
+    
+    <content>
+        <title>Vincent</title>
+        <image src="../assets/vincent.jpg"></image>
+    </content>
+    
+    <content>
+        <title>Alice</title>
+        <image src="../assets/alice.jpg"></image>
+    </content>
+    
+    <content>
+        <title>Cajsa</title>
+        <image src="../assets/cajsa.jpg"></image>
+    </content>
+    
+    <content>
+        <title id="Andra projekt">Mina andra projekt</title>
+        <link href="https://github.com/zimbosaurus/adventureboi">Adventureboi</link>
+        <link href="https://github.com/zimbosaurus/epic_title_generator">Epic word generator</link>
+    </content>
+</page>

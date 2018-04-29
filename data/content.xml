@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
     <content>
-        <title>Dynamic</title>
-        <body></body>
+        <title id="d">Dynamic</title>
+        <body>diarrhea</body>
     </content>
     <content>
         <title>Content</title>
-        <body></body>
+        <body>haha nice</body>
+        <image src="../assets/alice.jpg"></image>
     </content>
     <content>
         <title>Title</title>
