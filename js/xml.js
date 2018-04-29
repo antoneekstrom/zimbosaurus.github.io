@@ -16,6 +16,12 @@ function getXmlElement(tagname, n) {
 }
 
 $(document).ready(function() {
+    
+    //sets document to load
+    var name = $("#name").text();
+    file = "data/" + name + ".xml";
+    console.log(file);
+    
     //set up xml parsing
     parser = new DOMParser();
     xhttp = new XMLHttpRequest();
@@ -28,7 +34,7 @@ $(document).ready(function() {
     xhttp.open("GET", file, true);
     xhttp.send();
     
-    $("#test").click(function () {
+    setTimeout(function () {
         
         //find all content elements in .xml
         for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
@@ -116,7 +122,7 @@ $(document).ready(function() {
                 $("#container").append(content);
             }
         }
-    });
+    }, 1);
 });
 
 
