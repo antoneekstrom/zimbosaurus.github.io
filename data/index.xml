@@ -15,7 +15,7 @@
         <image src="../assets/alice.jpg"></image>
     </content>
     
-    <content>
+    <content id="cajsa">
         <title>Cajsa</title>
         <image src="../assets/cajsa.jpg"></image>
     </content>

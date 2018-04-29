@@ -15,41 +15,18 @@ function getXmlElement(tagname, n) {
     return element;
 }
 
-$(document).ready(function() {
+function loadContent(name) {
     
-    //sets document to load
-    var name = $("#name").text();
-    file = "data/" + name + ".xml";
-    console.log(file);
-    
-    //set up xml parsing
-    parser = new DOMParser();
-    xhttp = new XMLHttpRequest();
-    
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            getXml(this);
-        }
-    };
-    xhttp.open("GET", file, true);
-    xhttp.send();
-    
-    setTimeout(function () {
+    for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
         
-        //find all content elements in .xml
-        for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
+        xcontent = xmldoc.getElementsByTagName("content")[i];
+        if (xcontent.getAttribute("id") == name || name == "") {
             
-            //elements from .xml
-            var xcontent = xmldoc.getElementsByTagName("content")[i];
-            var xelement;
-            
-            //content elements
             var content = $("<div class='content'></div>");
             var h2 = $("<h2></h2>");
             var p = $("<p></p>");
             var img = $("<img>");
             
-            //find content tags in .xml file
             for (var k = 0; k < xcontent.childElementCount; k++) {
                 
                 //finds content child elements
@@ -64,7 +41,6 @@ $(document).ready(function() {
                     } else {
                         id = title;
                     }
-                    
                     $(h2).append(title);
                     $(h2).attr("id", id);
                     $(content).append(h2);
@@ -121,8 +97,50 @@ $(document).ready(function() {
                 
                 $("#container").append(content);
             }
+            
         }
+    }
+    
+}
+
+function contentWidth() {
+    if ($(window).width() < 480 || $(window).height() < 480) {
+        $(".content").each(function () {
+           $(this).css({width : '90%'}); 
+        });
+        $(".imagetext").css({display : 'none'});
+    }
+}
+
+function setFile(name) {
+    file = name;
+}
+
+$(document).ready(function() {
+    
+    
+    //sets document to load
+    var name = $("#name").text();
+    file = "data/" + name + ".xml";
+    console.log(file);
+    
+    //set up xml parsing
+    parser = new DOMParser();
+    xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            getXml(this);
+        }
+    };
+    xhttp.open("GET", file, true);
+    xhttp.send();
+    
+    setTimeout(function () {
+        loadContent("");
+        contentWidth();
     }, 1);
+    
 });
 
 
