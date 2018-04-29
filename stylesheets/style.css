@@ -339,6 +339,30 @@ span.value {
     z-index: 1000;
 }
 
+.status {
+    width: 20px;
+    height: 20px;
+    background-color: forestgreen;
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+    z-index: 9000;
+    
+    transition-duration: 0.1s;
+    transition-property: all;
+}
+
+.status:hover {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0.5);
+}
+
+.navdiv {
+    display: inline-block;
+}
+
 
 
 

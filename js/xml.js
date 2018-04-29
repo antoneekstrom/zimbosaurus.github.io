@@ -46,14 +46,19 @@ function loadContent(name) {
                     $(content).append(h2);
                     
                     //add title to sidebar
-                    var navdiv = $("<div></div>");
+                    var outernavdiv = $("<div></div>");
+                    var navdiv = $("<div class='navdiv'></div>");
                     var navanchor = $("<a></a>");
                     var navli = $("<li></li>");
+                    var navstatus = $("<div class='status'></div>");
+                    $(navstatus).attr("id", id + "status");
                     $(navanchor).attr("href", "#" + id);
+                    //$(navdiv).append(navstatus);
                     $(navli).append(id);
                     $(navanchor).append(navli);
                     $(navdiv).append(navanchor);
-                    $("#sidebar").append(navdiv);
+                    $(outernavdiv).append(navdiv);
+                    $("#sidebar").append(outernavdiv);
                     
                 }
                 
@@ -136,10 +141,14 @@ $(document).ready(function() {
     xhttp.open("GET", file, true);
     xhttp.send();
     
-    setTimeout(function () {
+    xhttp.onload = function () {
         loadContent("");
         contentWidth();
-    }, 1);
+    $(".status").click(function () {
+        var s = $(this).attr("id");
+        console.log(s);
+    });
+    }
     
 });
 
