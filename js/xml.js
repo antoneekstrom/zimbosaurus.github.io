@@ -139,7 +139,7 @@ $(document).ready(function() {
     setTimeout(function () {
         loadContent("");
         contentWidth();
-    }, 1);
+    }, 5);
     
 });
 
