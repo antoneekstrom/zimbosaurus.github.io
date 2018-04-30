@@ -51,7 +51,7 @@ function loadContent(name) {
                     var navanchor = $("<a></a>");
                     var navli = $("<li></li>");
                     var navstatus = $("<div class='status'></div>");
-                    $(navstatus).attr("id", id + "status");
+                    $(navstatus).attr("id", "status" + id);
                     $(navanchor).attr("href", "#" + id);
                     $(navdiv).append(navstatus);
                     $(navli).append(id);
@@ -60,6 +60,7 @@ function loadContent(name) {
                     $(outernavdiv).append(navdiv);
                     $("#sidebar").append(outernavdiv);
                     
+                    $(content).addClass(id.replace(" ", "-"));
                 }
                 
                 //finds body element if there is one
@@ -129,6 +130,7 @@ function clearContent() {
 }
 
 function xmlRequest() {
+    clearContent();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             getXml(this);
@@ -136,6 +138,16 @@ function xmlRequest() {
     };
     xhttp.open("GET", file, true);
     xhttp.send();
+}
+
+function replaceContent(name) {
+    setFile(name);
+    xmlRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4) {
+            xmlRequest();
+        }
+    }
 }
 
 $(document).ready(function() {
@@ -162,11 +174,25 @@ $(document).ready(function() {
         loadContent("");
         contentWidth();
         
-    $(".status").click(function () {
-        var s = $(this).attr("id");
-        console.log(s);
-    });
+        //sidebar status indicator action, I do not know why this has to be inside onload
+        $(".status").click(function () {
+            var s = $(this).attr("id");
+            s = s.replace("status", "");
+            s = s.replace(" ", "-");
+            $("." + s).toggle();
+        
+            if ($(this).css("backgroundColor") == "rgb(34, 139, 34)") {
+                
+                $(this).css({backgroundColor : '#a0a0a0'});
+                
+            } else {
+                
+                $(this).css({backgroundColor : 'forestgreen'});
+            }
+            console.log($(this).css("backgroundColor"));
+        });
     }
+    
 });
 
 

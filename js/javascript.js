@@ -57,13 +57,27 @@ $(document).ready(function() {
         }  
     });
     
-    $("#nextpage").click(function () {
-        setFile("data/next.xml");
-        xmlRequest();
-        xhttp.onreadystatechange = function () {
-            if (xhttp.readyState == 4) {
-                clearContent();
-            }
+    //replaces container contents with new file
+    $(".replacecontent").click(function () {
+        replaceContent($(this).attr("data-target"));
+        console.log($(this).attr("data-target"));
+    });
+    
+    //back to top button when scrolling
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $("#totop").css({top : '0'});
+        } else {
+            $("#totop").css({top : '-200px'});
         }
     });
+    //back to top button click
+    $("#topbutton").click(function () {
+        $(window).scrollTop(0);
+    });
+    
 });
+
+
+
+
