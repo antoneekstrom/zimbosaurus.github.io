@@ -46,14 +46,14 @@ function loadContent(name) {
                     $(content).append(h2);
                     
                     //add title to sidebar
-                    var outernavdiv = $("<div></div>");
+                    var outernavdiv = $("<div class='outernavdiv'></div>");
                     var navdiv = $("<div class='navdiv'></div>");
                     var navanchor = $("<a></a>");
                     var navli = $("<li></li>");
                     var navstatus = $("<div class='status'></div>");
                     $(navstatus).attr("id", id + "status");
                     $(navanchor).attr("href", "#" + id);
-                    //$(navdiv).append(navstatus);
+                    $(navdiv).append(navstatus);
                     $(navli).append(id);
                     $(navanchor).append(navli);
                     $(navdiv).append(navanchor);

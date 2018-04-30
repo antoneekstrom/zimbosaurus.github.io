@@ -286,6 +286,7 @@ div.content {
     background-color: #efefef;
     border-bottom-right-radius: 15px;
     position: fixed;
+    overflow-y: scroll;
 }
 
 .center {
@@ -361,6 +362,11 @@ span.value {
 
 .navdiv {
     display: inline-block;
+}
+
+.outernavdiv {
+    text-align: left;
+    margin-left: 10px;
 }
 
 
