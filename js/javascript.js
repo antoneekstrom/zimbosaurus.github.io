@@ -56,4 +56,14 @@ $(document).ready(function() {
             
         }  
     });
+    
+    $("#nextpage").click(function () {
+        setFile("data/next.xml");
+        xmlRequest();
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4) {
+                clearContent();
+            }
+        }
+    });
 });

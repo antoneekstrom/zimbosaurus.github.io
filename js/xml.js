@@ -1,4 +1,4 @@
-var file = "../data/index.xml";
+var file = "../data/index.xml"; 
 var parser, xmldoc, xhttp, xmltext;
 
 function getXml(xml) {
@@ -119,6 +119,23 @@ function contentWidth() {
 
 function setFile(name) {
     file = name;
+    console.log(file);
+}
+
+function clearContent() {
+    $("#container").children().each(function () {
+       $(this).remove(); 
+    });
+}
+
+function xmlRequest() {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            getXml(this);
+        }
+    };
+    xhttp.open("GET", file, true);
+    xhttp.send();
 }
 
 $(document).ready(function() {
@@ -144,6 +161,7 @@ $(document).ready(function() {
     xhttp.onload = function () {
         loadContent("");
         contentWidth();
+        
     $(".status").click(function () {
         var s = $(this).attr("id");
         console.log(s);
