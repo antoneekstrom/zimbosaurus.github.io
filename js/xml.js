@@ -20,7 +20,8 @@ function loadContent(name) {
     for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
         
         xcontent = xmldoc.getElementsByTagName("content")[i];
-        if (xcontent.getAttribute("id") == name || name == "") {
+        console.log(xcontent.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+        if (xcontent.getAttribute("id") == name || name == "" || name == xcontent.getElementsByTagName("title")[0].childNodes[0].nodeValue) {
             
             var content = $("<div class='content'></div>");
             var h2 = $("<h2></h2>");
@@ -44,8 +45,10 @@ function loadContent(name) {
                     $(h2).append(title);
                     $(h2).attr("id", id);
                     $(content).append(h2);
+                    $(content).attr("data-id", id);
                     
                     //add title to sidebar
+                    /*
                     var outernavdiv = $("<div class='outernavdiv'></div>");
                     var navdiv = $("<div class='navdiv'></div>");
                     var navanchor = $("<a></a>");
@@ -59,6 +62,7 @@ function loadContent(name) {
                     $(navdiv).append(navanchor);
                     $(outernavdiv).append(navdiv);
                     $("#sidebar").append(outernavdiv);
+                    */
                     
                     $(content).addClass(id.replace(" ", "-"));
                 }
@@ -106,7 +110,7 @@ function loadContent(name) {
             
         }
     }
-    
+    refreshSidebar();
 }
 
 function contentWidth() {
@@ -127,6 +131,7 @@ function clearContent() {
     $("#container").children().each(function () {
        $(this).remove(); 
     });
+    refreshSidebar();
 }
 
 function xmlRequest() {
@@ -148,6 +153,35 @@ function replaceContent(name) {
             xmlRequest();
         }
     }
+    refreshSidebar();
+}
+
+function refreshSidebar() {
+    
+    $("#sidebar").children().not("#sidebartitle").each(function() {
+       $(this).remove(); 
+    });
+    
+    $("#container").children().each(function() {
+        
+        var id = $(this).attr("data-id");
+        
+        //add title to sidebar
+        var outernavdiv = $("<div class='outernavdiv'></div>");
+        var navdiv = $("<div class='navdiv'></div>");
+        var navanchor = $("<a></a>");
+        var navli = $("<li></li>");
+        var navstatus = $("<div class='status'></div>");
+        $(navstatus).attr("id", "status" + id);
+        $(navanchor).attr("href", "#" + id);
+        $(navdiv).append(navstatus);
+        $(navli).append(id);
+        $(navanchor).append(navli);
+        $(navdiv).append(navanchor);
+        $(outernavdiv).append(navdiv);
+        $("#sidebar").append(outernavdiv);
+        
+    });
 }
 
 $(document).ready(function() {
@@ -173,14 +207,15 @@ $(document).ready(function() {
     xhttp.onload = function () {
         loadContent("");
         contentWidth();
-        
+        refreshSidebar();
         //sidebar status indicator action, I do not know why this has to be inside onload
         $(".status").click(function () {
             var s = $(this).attr("id");
             s = s.replace("status", "");
             s = s.replace(" ", "-");
+            
             $("." + s).toggle();
-        
+            
             if ($(this).css("backgroundColor") == "rgb(34, 139, 34)") {
                 
                 $(this).css({backgroundColor : '#a0a0a0'});
@@ -189,10 +224,8 @@ $(document).ready(function() {
                 
                 $(this).css({backgroundColor : 'forestgreen'});
             }
-            console.log($(this).css("backgroundColor"));
         });
     }
-    
 });
 
 

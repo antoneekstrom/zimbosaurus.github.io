@@ -214,6 +214,9 @@ div.content {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 40px;
+    
+    transition-duration: 1s;
+    transition-property: all;
 }
 
 .intextlink {
