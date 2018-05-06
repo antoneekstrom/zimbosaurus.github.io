@@ -245,6 +245,18 @@ function refreshSidebar() {
     statusClick();
 }
 
+function modeLoad() {
+    var m = getCookie("lmode");
+    
+    if (m == "standard") {
+        loadContent("", "");
+        
+    } else if (m == "dynamic") {
+        dLoadContent();
+        
+    }
+}
+
 function statusClick() {
     //sidebar status indicator action, I do not know why this has to be inside onload
     $(".status").click(function () {
@@ -264,6 +276,19 @@ function statusClick() {
             $(this).css({backgroundColor : 'forestgreen'});
         }
     });
+}
+
+function updateMode() {
+    var loadmode = getCookie("lmode");
+    if (loadmode == "standard" || loadmode == "dynamic") {
+        
+        $("#loadmode").html(getCookie("lmode"));
+        
+    } else {
+        
+        setCookie("lmode", "standard", 7);
+        $("#loadmode").html(getCookie("lmode"));
+    }
 }
 
 $(document).ready(function() {
@@ -287,7 +312,8 @@ $(document).ready(function() {
     xhttp.send();
     
     xhttp.onload = function () {
-        loadContent("", "");
+        updateMode();
+        modeLoad();
         contentWidth();
         refreshSidebar();
         statusClick();
@@ -327,6 +353,20 @@ $(document).ready(function() {
         });
         refreshSidebar();
     });
+    
+    updateMode();
+    
+    $("#change-load").click(function () {
+        if (getCookie("lmode") == "standard") {
+            setCookie("lmode", "dynamic", 7);
+            
+        } else if (getCookie("lmode") == "dynamic") {
+            setCookie("lmode", "standard", 7);
+            
+        }
+        updateMode();
+    })
+    
 });
 
 
