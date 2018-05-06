@@ -75,6 +75,11 @@ $(document).ready(function() {
     $("#topbutton").click(function () {
         $(window).scrollTop(0);
     });
+    $("#settingsbutton").click(function () {
+       $("#settings").toggle();
+    });
+    
+    
     
 });
 

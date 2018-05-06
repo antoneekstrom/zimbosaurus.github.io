@@ -4,12 +4,23 @@ body {
     text-align: center;
 }
 
-#headerimage {
-    width: 100%;
-} 
+html {
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 img {
     margin: 0;
+}
+
+#headerimage {
+    background-image: url("../assets/anton.jpg");
+    height: 500px;
 }
 
 .incontent {
@@ -113,6 +124,7 @@ li {
     font-family: Calibri, Helvetica, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 30px;
     cursor: pointer;
+    user-select: none;
     
     transition-duration: 0.2s;
     transition-property: padding, margin;
@@ -242,10 +254,7 @@ div.content {
 }
 
 .imagetext {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 45px;
 }
 
 .imagetitle {
@@ -406,6 +415,36 @@ span.value {
     transition-duration: 1s;
     transition-property: all;
 }
+
+#settingsbuttondiv {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#settingsbutton {
+    height: auto;
+}
+
+#settings {
+    position: fixed;
+    padding: 10px;
+    z-index: 999999;
+    top: 10%;
+    left: 10%;
+}
+
+
+
+
+
+
+
+
 
 
 

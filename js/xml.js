@@ -15,7 +15,7 @@ function getXmlElement(tagname, n) {
     return element;
 }
 
-function loadContent(name) {
+function loadContent(name, after) {
     
     for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
         
@@ -104,8 +104,11 @@ function loadContent(name) {
                     $(content).append(div);
                     
                 }
-                
-                $("#container").append(content);
+                if (after == "") {
+                    $("#container").append(content);
+                } else {
+                    $(content).insertAfter(after);
+                }
             }
             
         }
@@ -145,6 +148,63 @@ function xmlRequest() {
     xhttp.send();
 }
 
+//if element is scrolled into view
+function Utils() {
+
+}
+
+Utils.prototype = {
+    constructor: Utils,
+    isElementInView: function (element, fullyInView) {
+        var pageTop = $(window).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).height();
+
+        if (fullyInView === true) {
+            return ((pageTop < elementTop) && (pageBottom > elementBottom));
+        } else {
+            return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+        }
+    }
+};
+
+var Utils = new Utils();
+
+function dLoadContent() {
+    var l = xmldoc.getElementsByTagName("content").length;
+    
+    for (var i = 0; i < l; i++) {
+        
+        var div = $("<div class='content'></div>");
+        var p = $("<p>loading..</p>");
+        var debug = $("<p></p>");
+        
+        $(debug).append(i);
+        
+        $(div).append(debug);
+        $(div).append(p);
+        $(div).addClass("load");
+        
+        var id;
+        for (var k = 0; k < xmldoc.getElementsByTagName("content")[i].childNodes.length; k++) {
+            if (xmldoc.getElementsByTagName("content")[i].childNodes[k].nodeName == "title") {
+                id = xmldoc.getElementsByTagName("content")[i].childNodes[k].firstChild.nodeValue;
+                $(div).attr("data-id", id);
+                if (xmldoc.getElementsByTagName("content")[i].childNodes[k].hasAttribute("id")) {
+                    id = xmldoc.getElementsByTagName("content")[i].childNodes[k].getAttribute("id");
+                }
+            }
+            
+        }
+        
+        $("#container").append(div);
+        
+        /*var top = $(div).offset().top;
+        var scroll = $(window).scrollTop();*/
+    }
+}
+
 function replaceContent(name) {
     setFile(name);
     xmlRequest();
@@ -182,6 +242,28 @@ function refreshSidebar() {
         $("#sidebar").append(outernavdiv);
         
     });
+    statusClick();
+}
+
+function statusClick() {
+    //sidebar status indicator action, I do not know why this has to be inside onload
+    $(".status").click(function () {
+        var s = $(this).attr("id");
+        s = s.replace("status", "");
+        s = s.replace(" ", "-");
+            
+        console.log(s);
+        $("." + s).toggle();
+        
+        if ($(this).css("backgroundColor") == "rgb(34, 139, 34)") {
+                
+            $(this).css({backgroundColor : '#a0a0a0'});
+                
+        } else {
+                
+            $(this).css({backgroundColor : 'forestgreen'});
+        }
+    });
 }
 
 $(document).ready(function() {
@@ -205,27 +287,46 @@ $(document).ready(function() {
     xhttp.send();
     
     xhttp.onload = function () {
-        loadContent("");
+        loadContent("", "");
         contentWidth();
         refreshSidebar();
-        //sidebar status indicator action, I do not know why this has to be inside onload
-        $(".status").click(function () {
-            var s = $(this).attr("id");
-            s = s.replace("status", "");
-            s = s.replace(" ", "-");
-            
-            $("." + s).toggle();
-            
-            if ($(this).css("backgroundColor") == "rgb(34, 139, 34)") {
-                
-                $(this).css({backgroundColor : '#a0a0a0'});
-                
+        statusClick();
+    }
+    
+    //append element at specified index
+    jQuery.fn.appendAt = function( content, index ) {
+        this.each(function(i, item) {
+            var $content = $(content).clone();
+            if ( index === 0 ) {
+                $(item).prepend($content);
             } else {
-                
-                $(this).css({backgroundColor : 'forestgreen'});
+                $content.insertAfter($(item).children().eq(index-1));
             }
         });
-    }
+        $(content).remove();
+        return this;
+    };
+    
+    //replace loadcontainer with content div on visible
+    $(window).scroll(function () {
+        
+        $(".load").each(function () {
+            var isElementInView = Utils.isElementInView($(this), false);
+            
+            if (isElementInView) {
+                var id = $(this).attr("data-id");
+                var c = $(this);
+                var index = $(this).index();
+                
+                
+                loadContent(id, c);
+                c.remove();
+                
+            }
+            
+        });
+        refreshSidebar();
+    });
 });
 
 
