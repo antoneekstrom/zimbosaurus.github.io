@@ -20,7 +20,7 @@ img {
 
 #headerimage {
     background-image: url("../assets/anton.jpg");
-    height: 500px;
+    height: 600px;
 }
 
 .incontent {
@@ -254,7 +254,7 @@ div.content {
 }
 
 .imagetext {
-    padding-top: 45px;
+    padding-top: 50px;
 }
 
 .imagetitle {
@@ -419,7 +419,7 @@ span.value {
 #settingsbuttondiv {
     width: auto;
     height: auto;
-    padding: 15px;
+    padding: 5px;
     
     position: fixed;
     top: 20px;
@@ -448,6 +448,18 @@ span.value {
 #settings {
     display: inline-block;
     width: 500px;
+}
+
+#page-nav {
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+    position: sticky;
+    top: 0;
+}
+
+#page-nav-position {
+    height: 100%;
 }
 
 

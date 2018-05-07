@@ -1,4 +1,9 @@
 <page>
+    <head>
+        <banner src="../assets/anton.jpg"></banner>
+        <bannertitle>Välkommen till Anton's jättehäftiga hemsida</bannertitle>
+    </head>
+    
     <content>
         <title id="Om mig">Det är jag som är Anton Ekström</title>
         <body>Jag är Anton och jag är en människa som heter Anton och har en hemsida. Jag har en familj som består av mina två

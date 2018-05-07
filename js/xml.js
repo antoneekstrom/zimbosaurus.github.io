@@ -20,12 +20,11 @@ function loadContent(name, after) {
     for (var i = 0; i < xmldoc.getElementsByTagName("content").length; i++) {
         
         xcontent = xmldoc.getElementsByTagName("content")[i];
-        console.log(xcontent.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+        
         if (xcontent.getAttribute("id") == name || name == "" || name == xcontent.getElementsByTagName("title")[0].childNodes[0].nodeValue) {
             
             var content = $("<div class='content'></div>");
             var h2 = $("<h2></h2>");
-            var p = $("<p></p>");
             var img = $("<img>");
             
             for (var k = 0; k < xcontent.childElementCount; k++) {
@@ -47,28 +46,12 @@ function loadContent(name, after) {
                     $(content).append(h2);
                     $(content).attr("data-id", id);
                     
-                    //add title to sidebar
-                    /*
-                    var outernavdiv = $("<div class='outernavdiv'></div>");
-                    var navdiv = $("<div class='navdiv'></div>");
-                    var navanchor = $("<a></a>");
-                    var navli = $("<li></li>");
-                    var navstatus = $("<div class='status'></div>");
-                    $(navstatus).attr("id", "status" + id);
-                    $(navanchor).attr("href", "#" + id);
-                    $(navdiv).append(navstatus);
-                    $(navli).append(id);
-                    $(navanchor).append(navli);
-                    $(navdiv).append(navanchor);
-                    $(outernavdiv).append(navdiv);
-                    $("#sidebar").append(outernavdiv);
-                    */
-                    
                     $(content).addClass(id.replace(" ", "-"));
                 }
                 
                 //finds body element if there is one
                 if (xelement.nodeName == "body") {
+                    var p = $("<p></p>");
                     
                     body = xelement.firstChild.nodeValue;
                     $(p).append(body);
@@ -79,7 +62,9 @@ function loadContent(name, after) {
                 //finds image element if there is one
                 if (xelement.nodeName == "image") {
                     var src = xelement.getAttribute("src");
+                    var width = xelement.getAttribute("width");
                     $(img).attr("src", src);
+                    $(img).css({width : width});
                     $(img).addClass("incontent");
                     $(content).append(img);
                 }
@@ -104,15 +89,47 @@ function loadContent(name, after) {
                     $(content).append(div);
                     
                 }
+                
+                //creates a filler div
+                if (xelement.nodeName == "fill") {
+                    var fill = $("<div></div>");
+                    
+                    $(fill).addClass("fill");
+                    $(content).append(fill);
+                }
+                
                 if (after == "") {
                     $("#container").append(content);
                 } else {
                     $(content).insertAfter(after);
                 }
             }
-            
         }
     }
+        
+    //other page elements
+    for (var i = 0; i < xmldoc.getElementsByTagName("head").length; i++) {
+        var xcontent = xmldoc.getElementsByTagName("head")[i];
+        
+        for (var k = 1; k < xcontent.childNodes.length; k++) {
+            var xelement = xcontent.childNodes[k];
+            
+            //changes top of the page banner
+            if (xelement.nodeName == "banner") {
+                var src = xelement.getAttribute("src");
+                src = "url(" + src + ")";
+                $("#headerimage").css({'background-image' : src});
+            }
+            
+            //changes banner title at the top of the page
+            if (xelement.nodeName == "bannertitle") {
+                var text = xelement.firstChild.nodeValue;
+                $("#bannertitle").html(text);
+            }
+        }
+        
+    }
+    
     refreshSidebar();
 }
 
@@ -291,6 +308,23 @@ function updateMode() {
     }
 }
 
+//loads visible content
+function loadVisible() {
+    $(".load").each(function () {
+        var isElementInView = Utils.isElementInView($(this), false);
+            
+        if (isElementInView) {
+            var id = $(this).attr("data-id");
+            var c = $(this);
+            var index = $(this).index();
+                
+            loadContent(id, c);
+            c.remove();    
+        }   
+    });
+    refreshSidebar();
+}
+
 $(document).ready(function() {
     
     
@@ -335,23 +369,7 @@ $(document).ready(function() {
     
     //replace loadcontainer with content div on visible
     $(window).scroll(function () {
-        
-        $(".load").each(function () {
-            var isElementInView = Utils.isElementInView($(this), false);
-            
-            if (isElementInView) {
-                var id = $(this).attr("data-id");
-                var c = $(this);
-                var index = $(this).index();
-                
-                
-                loadContent(id, c);
-                c.remove();
-                
-            }
-            
-        });
-        refreshSidebar();
+        loadVisible();
     });
     
     updateMode();
