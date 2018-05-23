@@ -11,15 +11,15 @@
         <fill></fill>
         <body>Nedan finns en länk till min github där du finner nedladdning för spelet och koden.</body>
         <link href="https://github.com/zimbosaurus/adventureboi/">github</link>
+        <link href="https://github.com/zimbosaurus/adventureboi/releases/latest">Direkt till nedladdning</link>
     </content>
     
     <content>
-        <title>Senaste uppdateringen från github - WIP</title>
-        <body>Här skulle jag vilja ha anteckningarna från den senaste uppdateringen av adventureboi.</body>
-    </content>
-    
-    <content>
-        <title>Uppbygggnad</title>
-        <body>Spelet är gjort i språket java. Det är inte det bästa språket att skapa ett spel i eftersom att det inte finns mycket stöd för spelutveckling inom java. På grund av att java var språket som jag vid tillfället ville lära mig så blev det helt enkelt så att jag började att göra spelet i just det språket. Nu efteråt börjar jag att upptäcka vissa svårigheter med spelskapning i java som jag inte hade stött på om jag använde något som till exempel Unity. Dock så är jag fortforande glad att jag tog mig åt den här utmaningen för att jag har lärt mig väldigt mycket om hur det är att faktiskt göra ett helt projekt själv från början till slut och det tycker jag är en bra erfarenhet att innehava.</body>
+        <title>Uppbyggnad</title>
+        <body>Spelet är gjort i språket java. Det är inte det bästa språket att skapa ett spel i eftersom att det inte finns mycket stöd för spelutveckling inom java.
+         På grund av att java var språket som jag vid tillfället ville lära mig så blev det helt enkelt så att jag började att göra spelet i just det språket.
+          Nu efteråt börjar jag att upptäcka vissa svårigheter med spelskapning i java som jag inte hade stött på om jag använde något som till exempel Unity.
+           Dock så är jag fortforande glad att jag tog mig åt den här utmaningen för att jag har lärt mig väldigt mycket om hur det är att faktiskt göra ett
+            helt projekt själv från början till slut och det tycker jag är en bra erfarenhet att innehava.</body>
     </content>
 </page>
