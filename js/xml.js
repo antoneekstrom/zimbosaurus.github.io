@@ -83,6 +83,12 @@ function loadContent(name, after) {
                         $(a).attr("target", "_blank");
                     }
                     
+                    if (xelement.hasAttribute("xmltarget")) {
+                        var destination = xelement.getAttribute("xmltarget");
+                        $(a).addClass("replacecontent");
+                        $(a).attr("data-target", destination);
+                    }
+                    
                     $(li).append(text);
                     $(a).append(li);
                     $(div).append(a);

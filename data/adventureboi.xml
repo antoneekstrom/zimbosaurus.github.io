@@ -5,6 +5,11 @@
     </head>
     
     <content>
+        <title id="Andra sidor">Andra sidor</title>
+        <link xmltarget="data/adventureboistats.xml">Statistics</link>
+    </content>
+    
+    <content>
         <title id="Adventureboi">Adventureboi the game</title>
         <image src="../assets/adventureboi.png" width="30%"></image>
         <body>Adventureboi är det första spelet som jag har skapat i programmeringsspråket java. Jag har byggt det helt själv och jag är mycket stolt över det mästerverk som jag har skapat. Det är väldigt kul spel att spela. Det går att beskriva det som ett "2d rpg platformer" spel.</body>
