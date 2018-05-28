@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
     
     //replaces container contents with new file
-    $(".replacecontent").click(function () {
+    $(document).on("click", '.replacecontent', function () {
         replaceContent($(this).attr("data-target"));
         console.log($(this).attr("data-target"));
     });

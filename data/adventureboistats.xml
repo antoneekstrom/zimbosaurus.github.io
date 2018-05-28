@@ -4,6 +4,9 @@
     </head>
     
     <content>
-        <title>Här kommer det att finnas lite statistk för spelet.</title>
+        <title id="Statistik">Här kommer det att finnas lite statistk för spelet.</title>
+    </content>
+    
+    <content>
     </content>
 </page>
