@@ -440,6 +440,26 @@ span.value {
     right: 0;
 }
 
+.meter {
+    margin: 10px;
+    height: 75px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.meterdiv {
+    display: inline-block;
+}
+
+.meterfill {
+    width: 20%;
+    height: 100%;
+    background-color: dodgerblue;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
 .fill {
     height: 20px;
     width: 100%;
