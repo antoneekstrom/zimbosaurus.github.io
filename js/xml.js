@@ -220,11 +220,7 @@ function dLoadContent() {
             }
             
         }
-        
         $("#container").append(div);
-        
-        /*var top = $(div).offset().top;
-        var scroll = $(window).scrollTop();*/
     }
 }
 
