@@ -79,6 +79,13 @@ $(document).ready(function() {
        $("#settings").toggle();
     });
     
+    //width slider
+    var widthslider = document.getElementById("widthslider");
+    widthslider.oninput = function () {
+        var width = widthslider.value;
+        $("#contentwidth").html(width);
+        $(".entry").width(width + "%");
+    };
     
     
 });

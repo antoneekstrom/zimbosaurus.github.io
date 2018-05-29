@@ -497,6 +497,9 @@ span.value {
     background-color: dodgerblue;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    
+    transition-property: all;
+    transition-duration: 1s;
 }
 
 .fill {

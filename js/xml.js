@@ -23,7 +23,7 @@ function loadContent(name, after) {
         
         if (xcontent.getAttribute("id") == name || name == "" || name == xcontent.getElementsByTagName("title")[0].childNodes[0].nodeValue) {
             
-            var content = $("<div class='content'></div>");
+            var content = $("<div class='content entry'></div>");
             var h2 = $("<h2></h2>");
             var img = $("<img>");
             
