@@ -442,18 +442,57 @@ span.value {
 
 .meter {
     margin: 10px;
-    height: 75px;
-    width: 300px;
+    height: 50px;
+    width: 350px;
     border-radius: 50px;
     background-color: white;
+    overflow: hidden;
 }
 
 .meterdiv {
     display: inline-block;
 }
 
+.slider {
+    -webkit-appearance: none;
+    background: #2d2d2d;
+    opacity: 0.5;
+    width: 500px;
+    height: 35px;
+    outline: none;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background: white;
+    opacity: 0.5;
+    cursor: pointer;
+    
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #f4f4f4;
+    opacity: 1;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
 .meterfill {
-    width: 20%;
+    display: block;
     height: 100%;
     background-color: dodgerblue;
     border-top-left-radius: 50px;
@@ -462,7 +501,6 @@ span.value {
 
 .fill {
     height: 20px;
-    width: 100%;
 }
 
 #settings {

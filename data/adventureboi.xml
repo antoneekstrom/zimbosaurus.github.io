@@ -6,8 +6,8 @@
     
     <content>
         <title id="Andra sidor">Andra sidor</title>
-        <link xmltarget="data/adventureboistats.xml">statistik</link>
-        <link href="html/statistik.html">statistik 2</link>
+        <link href="html/statistik.html">statistik</link>
+        <link xmltarget="../data/svampskogen.xml">svampskogen</link>
     </content>
     
     <content>
