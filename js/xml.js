@@ -85,8 +85,8 @@ function loadContent(name, after) {
                     
                     if (xelement.hasAttribute("xmltarget")) {
                         var destination = xelement.getAttribute("xmltarget");
-                        $(a).addClass("replacecontent");
-                        $(a).attr("data-target", destination);
+                        $(li).addClass("replacecontent");
+                        $(li).attr("data-target", destination);
                     }
                     
                     $(li).append(text);
