@@ -1,0 +1,205 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+div {
+    margin: 0;
+    color: rgb(32, 33, 36);
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 60px;
+    color: rgb(32, 33, 36);
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    color: inherit;
+    font-family: Roboto, sans-serif;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 400;
+    padding: 0;
+    color: rgb(32, 33, 36);
+    font-family: Roboto, sans-serif;
+}
+
+.card-primary {
+    background-color: royalblue;
+    width: 400px;
+    margin: 30px;
+    margin-left: 0;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #e0e0e0;
+}
+
+p1 {
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+}
+
+p3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    width: auto;
+}
+
+p2 {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.paragraph {
+    color: rgba(0, 0, 0, 0.6);
+    width: 700px;
+    display: inline-block;
+}
+
+#maincontent-container {
+    padding-top: 100px;
+    padding-left: 100px;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+}
+
+li.sidebar-entry:hover {
+    background-color: #f5f5f5;
+}
+
+#sidebar-outercontainer {
+    box-shadow: inset 0 0 30px #e0e0e0;
+    display: inline-block;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    float: left;
+}
+
+.material-icons {
+    font-family: Material Icons;
+    font-size: 50px;
+    margin: 0;
+    user-select: none;
+}
+
+.sidebar-entry {
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+.button {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px rgb(40, 40, 40, 0.2);
+    
+    transition-duration: 0.1s;
+    transition-property: all;
+}
+
+.b-white:hover {
+    background-color: #d3e4ff;
+}
+
+.b-blue:hover {
+    background-color: #597dea;
+}
+
+p.button {
+    padding: 0;
+    display: inline;
+    margin: 0;
+}
+
+.b-white {
+    background-color: white;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.b-blue {
+    color: white;
+    width: 100px;
+    background-color: royalblue;
+}
+
+#sidebar-collapsediv {
+    margin: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+    z-index: 0;
+    position: relative;
+    left: -100px;
+    top: -100px;
+    
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#sidebar-collapsediv:hover {
+    background-color: #f5f5f5;
+}
+
+#main-container {
+    height: 100%;
+}
+
+#sidebar-list {
+    text-align: left;
+    padding-top: 20px;
+}
+
+#navbar-container {
+    z-index: 10;
+    box-shadow: 2px 2px 2px 2px #e0e0e0;
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 50px;    
+    width: 100%;
+}
+
+#navbartitle-container {
+    
+}

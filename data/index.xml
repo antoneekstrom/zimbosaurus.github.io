@@ -11,6 +11,12 @@
     </content>
     
     <content>
+        <title>Material Design</title>
+        <body>"Material Design" är ett så kallat designspråk gjort av Google, vilket är en mängd riktlinjer för att designa grafik för hemsidor och applikationer. Nedanför finns en länk till sidan som jag håller på med.</body>
+        <link href="../html/other/mdc1.html">Material Design</link>
+    </content>
+    
+    <content>
         <title>Vincent</title>
         <image src="../assets/vincent.jpg"></image>
     </content>
