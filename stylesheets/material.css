@@ -78,9 +78,12 @@ p2 {
 }
 
 #maincontent-container {
-    padding-top: 100px;
-    padding-left: 100px;
     float: left;
+}
+
+#content-container {
+    padding-left: 100px;
+    padding-top: 50px;
 }
 
 ul {
@@ -168,9 +171,9 @@ p.button {
     height: 25px;
     padding: 8px;
     z-index: 0;
-    position: relative;
-    left: -100px;
-    top: -100px;
+    position: sticky;
+    top: 120px;
+    float: left;
     
     transition-duration: 0.2s;
     transition-property: all;
