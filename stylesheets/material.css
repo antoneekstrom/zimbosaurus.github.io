@@ -268,14 +268,69 @@ p.button {
     margin-right: 40px;
     border-radius: 10px;
     float: left;
-    display: inline-block;
+    display: block;
     
     transition-duration: 0.2s;
     transition-property: all;
 }
 
-.navbar-link:hover {
-    background-color: #e0e0e0; 
+.searchbar {
+    border: none;   
+    display: inline-block;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    outline: none;
+    font-family: Roboto, sans-serif;
+}
+
+.searchbar-container {
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px rgb(40, 40, 40, 0.2);
+    width: 250px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.searchbar-container:focus-within {
+    box-shadow: 0 0 2px 2px rgb(65, 105, 225, 0.5);
+}
+
+.searchbar-button {
+    border-style: none;
+    font-family: Roboto, sans-serif;
+    background-color: royalblue;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    vertical-align: center;
+    text-decoration: none;
+}
+
+.searchbar-button:hover {
+    background-color: #597dea;
+    box-shadow: 0 0 2px 2px rgb(65, 105, 225, 0.5);
+}
+
+.searchbar::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: orangered;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#navsearchbar-container {
+    height: auto;
+    width: auto;
+    padding: 5px;
+    display: inline-block;
 }
 
 #navbar-about {
