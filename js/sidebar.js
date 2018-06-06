@@ -12,4 +12,16 @@ $(document).ready(function () {
             $("#sidebar-outercontainer").animate({"margin-left" : "0"}) ;
         }
     });
+    $("#sidebar-list").children().on("click", function () {
+       if (!($(this).children().prop("tagName") == "H3") && !($(this).hasClass("sidebar-entry-selected"))) {
+           $(this).parent().children().each(function () {
+              if ($(this).hasClass("sidebar-entry-selected")) {
+                  $(this).removeClass("sidebar-entry-selected");
+                  $(this).addClass("sidebar-entry");
+              }
+           });
+           $(this).removeClass("sidebar-entry");
+           $(this).addClass("sidebar-entry-selected");
+       }
+    });
 });

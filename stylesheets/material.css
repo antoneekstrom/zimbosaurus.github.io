@@ -86,18 +86,75 @@ p2 {
     padding-top: 50px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.sidebar-entry-selected {
+    padding-left: 40px;
+    background-color: #d3e4ff;
+    color: royalblue;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: default;
 }
 
-li {
-    padding: 10px;
+.sidebar-entry {
+    cursor: pointer;
+    padding-left: 40px;
 }
 
 li.sidebar-entry:hover {
     background-color: #f5f5f5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+li {
+    transition-duration: 0.1s;
+    transition-property: all;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+#bottominfo-container {
+    background-color: #e0e0e0;
+    width: 100%;
+    display: inline-block;
+    height: 100px;
+    box-shadow: inset 0 0 10px rgb(137, 137, 137, 0.6);
+    padding: 20px;
+}
+
+#bottominfo-innercontainer {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#bottominfo-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bottominfo-links {
+    padding: 15px;
+    padding-right: 25px;
+    float: left;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#bottominfo-links-container {
+    display: inline-block;
+}
+
+a {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
 }
 
 #sidebar-outercontainer {
@@ -109,16 +166,17 @@ li.sidebar-entry:hover {
     float: left;
 }
 
+.inherit {
+    color: inherit;
+    background-color: inherit;
+    font-size: inherit;
+}
+
 .material-icons {
     font-family: Material Icons;
     font-size: 50px;
     margin: 0;
     user-select: none;
-}
-
-.sidebar-entry {
-    cursor: pointer;
-    padding-left: 40px;
 }
 
 .button {
@@ -201,8 +259,41 @@ p.button {
     top: 0;
     height: 50px;    
     width: 100%;
+    overflow: hidden;
+}
+
+.navbar-link {
+    font-size: 22px;
+    padding: 10px;
+    margin-right: 40px;
+    border-radius: 10px;
+    float: left;
+    display: inline-block;
+    
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.navbar-link:hover {
+    background-color: #e0e0e0; 
+}
+
+#navbar-about {
+    float: right;
+}
+
+#navbarcontent-container {
+    float: left;
+    display: inline-block;
+    margin-left: 100px;
+    vertical-align: middle;
+    height: 100%;
+    width: auto;
+    
+    display: flex;
 }
 
 #navbartitle-container {
-    
+    float: left;
+    display: inline-block;
 }
