@@ -20,6 +20,16 @@ body {
     margin: 0;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:visited, a:visited:active {
+    color: white;
+    text-decoration: none;
+}
+
 /* Large title */
    /* Usually colored (Or with a colored background) */
 h1 {
