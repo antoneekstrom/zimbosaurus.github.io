@@ -1,0 +1,266 @@
+html {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1vw;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+}
+
+span {
+    color: yellow;
+}
+
+a {
+    font-size: 1.5vw;
+    font-family: "Open Sans"; 
+}
+
+div.container, footer.container {
+    display: inline-block;
+    width: 50em;
+    margin-top: 5em;
+    border-radius: 1.5vw;
+}
+
+address a {
+    font-style: normal;
+    color: white;
+    margin: 10px;
+}
+
+address p {
+    font-size: 1.5vw;
+    font-family: "Open Sans";
+}
+
+footer {
+    margin-top: 5em;
+}
+
+div.background, header.background, footer.background, nav.background {
+    background-color: mediumslateblue;
+    padding: 2.5em;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    background-color: mediumslateblue;
+    width: 1.5em;
+}
+
+html::-webkit-scrollbar {
+    width: 2.5em;
+}
+
+div::-webkit-scrollbar, div::-webkit-scrollbar-thumb {
+    border-radius: 1.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+#nav-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80%;
+    margin-top: 1.5em;
+}
+
+div.divider {
+    height: 1.5em;
+}
+
+div.imgframe a {
+    display: inline-block;
+}
+
+.imgframe {
+    background-color: white;
+    border-radius: 1.5vw;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+img {
+    border-radius: 1.5vw;
+}
+
+aside.nav {
+    position: sticky;
+    float: left;
+    top: 5em;
+    height: 100%;
+    width: 0;
+    margin-top: 5em;
+}
+
+nav {
+    border-radius: 1.5vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+    width: 13em;
+    height: 30em;
+    
+    /*box-shadow: white 2px 2px 10px 1px;*/
+    border: solid white 0.5em;
+    border-left: none;
+}
+
+.gandhi:hover {
+    filter: invert(1);
+}
+
+.gandhi {
+    width: 10em;
+    margin: 0.5em;
+}
+
+video {
+    width: 0;
+}
+
+p.roman {
+    font-family: "Times New Roman";
+    text-align: left;
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+div.roman {
+    display: inline-block;
+    width: 65%;
+}
+
+.center {
+    text-align: center;
+}
+
+.audio_button {
+    font-family: "Open Sans";
+    background-color: mediumslateblue;
+    border-radius: 20em;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0.5em;
+}
+
+.audio_button:hover {
+    background-color: white;
+    color: mediumslateblue;
+    border: solid mediumslateblue 0.2em;
+    padding: 0.3em;
+}
+
+ol {
+    
+}
+
+ol li {
+    width: 25em;
+    float: right;
+    text-align: left;
+    margin-right: 2em;
+    padding: 1em;
+    padding-left: 1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 1em;
+}
+
+li {
+    font-family: "Open Sans";
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 1em;
+}
+
+ul:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+nav li {
+    background-color: white;
+    color: mediumslateblue;
+    border-radius: 1.5vw;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+nav li:hover {
+    background-color: mediumslateblue;
+    border: solid white 0.2em;
+    color: white;
+    padding: 0.3em;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+a:active, a:checked, a:visited, a {
+    color: inherit;
+}
+
+blockquote {
+    font-family: "Open Sans";
+    font-size: 1.5vw;
+    color: rgb(220,220,220);
+}
+
+blockquote a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+blockquote span {
+    color: white;
+    text-decoration: none;
+}
+
+q {
+    font-style: italic;
+}
+
+.red {
+    color: orangered;
+}
+
+div.container p {
+    
+}
+
+p {
+    color: white;
+    font-family: "Open Sans";
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+h1.background {
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 2.5vw;
+    color: inherit;
+    font-weight: 500;
+}
