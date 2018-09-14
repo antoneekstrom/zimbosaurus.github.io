@@ -53,15 +53,11 @@ div.background, header.background, footer.background, nav.background {
 
 ::-webkit-scrollbar {
     background-color: mediumslateblue;
-    width: 1.5em;
-}
-
-html::-webkit-scrollbar {
-    width: 2.5em;
 }
 
 div::-webkit-scrollbar, div::-webkit-scrollbar-thumb {
     border-radius: 1.5vw;
+    width: 1.5vw;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -95,12 +91,13 @@ img {
 }
 
 aside.nav {
-    position: sticky;
     float: left;
-    top: 5em;
     height: 100%;
     width: 0;
     margin-top: 5em;
+    
+    position: sticky;
+    top: 5em;
 }
 
 nav {
@@ -109,7 +106,7 @@ nav {
     border-bottom-left-radius: 0;
     
     width: 13em;
-    height: 30em;
+    height: 30vw;
     
     /*box-shadow: white 2px 2px 10px 1px;*/
     border: solid white 0.5em;
