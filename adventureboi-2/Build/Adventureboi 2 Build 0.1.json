@@ -1,0 +1,16 @@
+{
+"companyName": "ADVENTUREBOI AB",
+"productName": "Adventureboi 2",
+"productVersion": "0.1",
+"dataUrl": "Adventureboi 2 Build 0.1.data.unityweb",
+"wasmCodeUrl": "Adventureboi 2 Build 0.1.wasm.code.unityweb",
+"wasmFrameworkUrl": "Adventureboi 2 Build 0.1.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.11f1"
+}
