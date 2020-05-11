@@ -1,0 +1,194 @@
+/* Variables */
+:root {
+    --main-color: rgb(52, 119, 226);
+    --main-width: 45%;
+    --main-spacing: 100px;
+    --block-vertical-padding: 35px;
+    --grey: rgb(35, 35, 35);
+    --lightgrey: rgb(240, 240, 240);
+    --image-height: 300px;
+    --main-border-width: 4px;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:visited, a:visited:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Large title */
+   /* Usually colored (Or with a colored background) */
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+/* Sub-title */
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--grey);
+    margin: 0;
+    margin-top: 15px;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: var(--grey);
+    width: var(--main-width);
+    text-align: left;
+    display: inline-block;
+}
+
+p.block {
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+
+div.image-block {
+    background: rgb(255,255,255,0.5);
+    display: inline-block;
+    padding: 35px;
+}
+
+h1.image {
+    margin: 0;
+}
+
+p.image {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: none;
+}
+
+.spacing {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+button.image {
+    border: var(--grey) solid var(--main-border-width);
+    border-radius: 10px;
+    color: var(--grey);
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(255, 255, 255, 0);
+}
+
+button.white {
+    background-color: white;
+    color: var(--grey);
+    border-radius: 10px;
+    border-width: +3px;
+}
+
+button.colored {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    border-width: +3px;
+}
+
+button.white:hover {
+    box-shadow: var(--main-color) inset 0 0 3px;
+}
+
+button.colored:hover {
+    box-shadow: white inset 0 0 3px;
+}
+
+div.image {
+    height: var(--image-height);
+    width: var(--main-width);
+    overflow: hidden;
+    background-image: url(../images/wide.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.wide-image {
+    width: 100%;
+}
+
+#main-title {
+    margin-top: 50px;
+}
+
+#main-subtitle {
+    color: grey;
+    font-size: 25px;
+}
+
+.title-colored {
+    color: var(--main-color);
+}
+
+h1.block {
+    color: white;
+    display: inline-block;
+}
+
+.section {
+    margin-bottom: var(--main-spacing);
+    margin-top: var(--main-spacing);
+}
+
+.grey-block {
+    display: inline-block;
+    background-color: var(--lightgrey);
+    text-align: center;
+    padding-top: var(--block-vertical-padding);
+    padding-bottom: var(--block-vertical-padding);
+}
+
+.center-outer {
+    text-align: center;
+}
+
+.center-inner {
+}
+
+img.block {
+}
+
+.colored-block {
+    background-color: var(--main-color);
+    display: inline-block;
+    text-align: center;
+    width: var(--main-width);
+    padding-top: var(--block-vertical-padding);
+    padding-bottom: var(--block-vertical-padding);
+}

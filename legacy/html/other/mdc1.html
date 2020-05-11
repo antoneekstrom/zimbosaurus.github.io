@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Material Design</title>
+        <link href="/stylesheets/material.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/js/sidebar.js"></script>
+    </head>
+    <body>
+        <!-- Navigation bar -->
+        <div id="navbar-container">
+            <div id="navbartitle-container"><h2>Material Design</h2></div>
+            <nav id="navbarcontent-container">
+                <a class="navbar-link">Front</a>
+                <a class="navbar-link">Design</a>
+                <a class="navbar-link">Material</a>
+                <a class="navbar-link" id="navbar-about">About</a>
+            </nav>
+            <div id="navsearchbar-container" class="searchbar-container">
+                <input placeholder="Search on site" type="search" class="searchbar">
+                <div class="searchbar-button">Search</div>
+            </div>
+        </div>
+        
+        <!-- Main container -->
+        <div id="main-container">
+            <!-- Side bar -->
+            <div id="sidebar-outercontainer">
+                <ul id="sidebar-list">
+                    <li class="sidebar-category"><h3>First Page</h3></li>
+                    <li class="sidebar-entry-selected"><p3>This is an entry in the sidebar underneath a category.</p3></li>
+                    <li class="sidebar-category"><h3>Second Page</h3></li>
+                    <li class="sidebar-entry"><p3>This is another entry.</p3></li>
+                    <li class="sidebar-entry"><p3>A third entry is present.</p3></li>
+                </ul>
+            </div>
+            <!-- Main content container -->
+            <div id="maincontent-container">
+                <div id="sidebar-collapsediv"><i class="material-icons">menu</i></div>
+                <div id="content-container">
+                    <h1>Material Design</h1>
+                    <p2 class="paragraph">Hello, this is a site based on the design language material design. Material design is a set of guidelines google has created for designed graphics for webpages and applications.</p2>
+                    <div class="card-primary">
+                        <h2>Card title</h2>
+                        <p2>This is a card with the primary color.</p2>
+                        <div class="button b-white">This is a button</div>
+                    </div>
+                    <p2 class="paragraph">below is another button.</p2>
+                    <div class="button b-blue">Button</div>
+                    <div class="button b-white">A white button</div>
+                </div>
+            </div>
+            <!-- Bottom info container -->
+            <div id="bottominfo-container">
+                <div id="bottominfo-innercontainer">
+                    <!-- Text block -->
+                    <div id="bottominfo-text">
+                        <p2 class="inherit">This page is an incredibly epic creation of the fantastic Anton Ekström. All credit for this masterpiece goes to him. (And google for creating material design and for being the source of all my inspiration for this page.</p2>
+                    </div>
+                    <!-- Links -->
+                    <ul id="bottominfo-links-container">
+                        <li class="bottominfo-links"><a>About</a></li>
+                        <li class="bottominfo-links"><a>Help</a></li>
+                        <li class="bottominfo-links"><a>Send feedback</a></li>
+                        <li class="bottominfo-links"><a>Back to home</a></li>
+                        <li class="bottominfo-links"><a>Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

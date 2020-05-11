@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <title>Anton's Hemsida</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="javascript/js.js"></script>
+    </head>
+    <body>
+        <!-- Här kommer titeln -->
+        <header class="background" id="header">
+            <h1 class="background">Det här är en <span>&#60;header&#62;</span> som innehåller en titel.</h1>
+            <p class>Titeln är ett <span>&#60;h1&#62;</span> element och den här subtiteln är ett <span>&#60;p&#62;</span> element.</p>
+        </header>
+        
+        <!-- En sidebar -->
+        <aside class="nav">
+            <nav class="background">
+                    <h1>Navigera</h1>
+                <div id="nav-scroll">
+                    <ul>
+                        <li><a href="#header">Header</a></li>
+                        <li><a href="#tags">Taggar</a></li>
+                        <li><a href="#story">Sann historia</a></li>
+                        <li><a href="#top5">Top 5 taggar</a></li>
+                        <li><a href="#anchors">Länkar</a></li>
+                        <li><a href="#historia">en till historia</a></li>
+                        <li><a href="#downunder">video</a></li>
+                        <li><a href="#media">Bild och ljud</a></li>
+                        <li><a href="#footer">Footer</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- Här kommer självaste innehållet på sidan -->
+        <main>
+            <!-- Tag förklaringar -->
+            <div class="container background" id="tags">
+                <h1>Tag Presentation</h1>
+                <p>Här tänker jag visa upp lite olika taggar som man kan använda i html5.</p>
+                <div class="divider"></div>
+
+                <!-- b tagg -->
+                <h1><b><span>&#60;b&#62;</span> taggen</b></h1>
+                <p><span>&#60;b&#62;</span> taggen gör text <b>BOLD</b>, det vill säga <b>fet</b>.</p>
+                <div class="divider"></div>
+                
+                <!-- STRONG tag -->
+                <h1><strong><span>&#60;strong&#62;</span> taggen</strong></h1>
+                <p><span>&#60;strong&#62;</span> <i>ser ut</i> precis som <span>&#60;b&#62;</span> gör i de flesta webbläsarna. Skillnaden är att <span>&#60;strong&#62;</span> är en indikation hur något bör läsas. Den används mer som hjälp för t. ex blinda personer som använder sig av textuppläsnings tjänster och hjälper externa program/webbläsaren att förstå strukturen på din hemsida.</p>
+                <div class="divider"></div>
+
+                <!-- i tagg -->
+                <h1><i><span>&#60;i&#62;</span> taggen</i></h1>
+                <p>Man använder <span>&#60;i&#62;</span> för att göra saker <i>kursiva</i>. Väldigt <i><b>EPISKT.</b></i></p>
+                <div class="divider"></div>
+
+                <!-- u tagg -->
+                <h1><u><span>&#60;u&#62;</span> taggen</u></h1>
+                <p>Om man vill <u>understryka</u> någonting för att lägga vikt på det kan man använda den här taggen.</p>
+                <div class="divider"></div>
+
+                <!-- sub och superscript -->
+                <h1><span>&#60;sub&#62;</span><sub>sub</sub> och <span>&#60;sup&#62;</span><sup>super</sup> taggarna</h1>
+                <p>Om man av någon anledning skulle finnas sig i en situation där man vill skriva mattematiska uttryck eller beskriva kemiska ämnen så är dessa bra att ha.</p>
+                <p>Nice<sub>nice</sub><sup>nice</sup><sub>nice</sub><sub>nice</sub><sup>nice</sup></p>
+            </div>
+            
+            <!-- En historia -->
+            <div class="container background" id="story">
+                <h1>En sann historia om <span>&#60;q&#62;</span> och <span>&#60;blockquotes&#62;</span>.</h1>
+                <p>En dag när jag var ute och gick så mötte jag en svamp som sa <q>Hej där Anton, det är jag som är en svamp. kul att träffa dig</q>. Då sa jag <q>Wow jag kan inte tro mina ögon! Det är en svamp. Jag trodde aldrig att jag skulle få tala med en svamp</q>. Efter det så slog jag svampen i huvudet med en sten.</p>
+                <blockquote cite="https://en.wikipedia.org/wiki/Mahatma_Gandhi">Om du någonsin möter en svamp och han säger <q>Hej där, det är jag som är en svamp.</q> så bör du slå den i huvudet med en sten efter att du uttrycker din glädje att få ha träffat en svamp. <span><a href="https://en.wikipedia.org/wiki/Mahatma_Gandhi" target="_blank">—Gandhi</a></span></blockquote>
+            </div>
+            
+            <!-- En ordered list -->
+            <div class="container background" id="top5">
+                <h1>TOPP 5 TAGGAR</h1>
+                <p>Här kommer en lista med mina favorit element i språket html.</p>
+                <ol>
+                    <li>
+                        <p><span>&#60;div&#62;</span></p>
+                        <p>Den här taggen är min favorit just eftersom den är väldigt flexibel och kan användas till allt möjligt. Det blir svårt att strukturera en fin sida utan <span>&#60;div&#62;</span> element. Däremot i html5 så har det kommit nya struktur taggar men dem ersätter inte helt div.</p>
+                    </li>
+                    <li>
+                        <p><span>&#60;p&#62;</span></p>
+                        <p>Jag tycker att <span>&#60;p&#62;</span> är en väldigt bra tagg för att uttrycka sig eftersom man kan använda den för att skriva text vilket jag gillar.</p>
+                    </li>
+                    <li>
+                        <p><span>&#60;span&#62;</span></p>
+                        <p><span>&#60;span&#62;</span> är väldigt användbar för att markera delar av text med olika färger och stiler. Jag använder den på den här sidan när jag skriver taggar för att göra dem gula så att de sticker ut lite mer.</p>
+                    </li>
+                    <li>
+                        <p><span>&#60;b&#62;</span></p>
+                        <p><b>FET</b> taggen ligger rätt långt ner på listan men den bör inte underskattas. Visst, man kan använda CSS för att göra saker och ting feta men <span>&#60;b&#62;</span> har bara det där lilla extra som man kan behöva ibland.</p>
+                    </li>
+                    <li>
+                        <p><span>&#60;sub&#62;</span></p>
+                        <p>Om jag skall vara helt ärlig så är <span>&#60;sub&#62;</span> bara här för att jag inte kunde komma på en femte tagg som jag gillade så det fick helt enkelt bli den här. Jag tycker den är ganska tuff men det är väl allt.</p>
+                    </li>
+                </ol>
+            </div>
+            
+            <!-- Varianter av länkar -->
+            <div class="container background" id="anchors">
+                <h1>Varianter av länkar</h1>
+                <p>Det finns några olika varianter av länkar man kan skapa i html. Det går att länka till andra sidor på webben eller interna saker på sin egna sida. Alla dessa gör man med <span>&#60;a&#62;</span> taggar och <span>href</span> attributen för att ange en destination.</p>
+                <div class="divider"></div>
+                
+                <h1>Externa länkar</h1>
+                <p>Externa länkar är sådana som leder till andra sidor på webben. Man kan till exempel länka till google och öppna sidan i en ny tabb i webbläsaren. Då ser det ut <a href="https://google.com/" target="_blank">så här</a>.</p>
+                <div class="divider"></div>
+                
+                <h1>Interna länkar</h1>
+                <p>Interna länkar använder man för att länka till andra html dokument på sin hemsida. Jag kan till exempel länka till det <a href="gandhi.html" target="_blank">här dokumentet</a>.</p>
+                <div class="divider"></div>
+                
+                <h1>Länkar till element</h1>
+                <p>Till slut så går det att göra länkar som hoppar till en annan del på sidan när användaren klickar på den. Det gör man genom att ge <span>href</span> attributen en id på ett element i dokumentet. Då ser det ut på <a href="#header">det här viset</a>.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <!-- En personlig upplevelse -->
+            <div class="container background center" id="historia">
+                <h1>En personlig upplevelse</h1>
+                <div class="roman">
+                    <p class="roman">Det var en vacker sommardag 2018 när jag befann mig i skolkorridoren. Jag spanade utöver den öppna ytan där det fanns ett antal bord, de flesta var fulla men jag beskådade ett ledigt bord lite längre bort. Jag som elev var mycket utmattad efter en lång dag av studier och fokuserat studerande och såg fram emot att placera min undersida på en mjuk stol vid ett cirkulärt bord. Det var då som jag märkte någonting oerhört fruktansvärt. Bordet var klibbigt och täckt med någon slags vätska, vad jag förmodar var energidryck, någonting som ungdomar brukade unna sig på den tiden under rasterna. Men inte nog med det, bordet var dekorerat med ett högt antal tomma godisförpackningar och välta dryck behållare. När jag drog ut stolen såg jag framför mig något som fick mig att häpna. Stolen var befläckad av kaffe och andra okända substanser. I chock, backade jag i försök att avlägsna mig från den hemska situationen som jag befann mig i. När fotsulan av mina Adidas® Stan Smith® närmade sig golvet gick mina mörkaste mardrömmar i uppfyllelse. Ett prassel gav mig kalla kårar när jag hade trampat på en tom Mars Bar®. Det var då jag hade fått nog, imorgon tänkte jag skicka ett brev till statsministern om att legalisera avrättning.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- bästa låten någonsin -->
+            <div class="container background center" id="downunder">
+                <h1>Episk musikvideo</h1>
+                <p><a href="https://sv.wikipedia.org/wiki/Men_at_Work" target="_blank">Men At Work</a> - Down Under (1980)</p>
+                <span>
+                    <p><a href="https://www.youtube.com/watch?v=XfR9iY5y94s" target="_blank">Youtube</a></p>
+                </span>
+                <div class="video-container">
+                <video controls>
+                    <source src="resources/videos/downunder.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+            
+            <!-- Element som inte riktigt passar in men som jag behöver ha med -->
+            <div class="container background" id="media">
+                <h1>Bild och ljud</h1>
+                <p>I den här delen finns det väldigt häftiga grejer, det är vad jag kallar för <strong><i><span>visuella upplevelser</span></i></strong>. (och ljud)</p>
+                <div class="imgframe">
+                    <a href="gandhi.html" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Portrait_Gandhi.jpg/330px-Portrait_Gandhi.jpg" class="gandhi">
+                    </a>
+                    <div>
+                        <button class="audio_button" id="gandhi">Ljud</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Botten del -->
+        <footer class="background" id="footer">
+            
+            <!-- Tagg beskrivning -->
+            <h1>Här har vi en <span>&#60;footer&#62;</span>.</h1>
+            <p>Den används för att visa att den här delen av sidan brukar vara längst ner och innehålla allmän information om sidan och dess skapare.</p>
+            <div class="divider"></div>
+            
+            <!-- Kontakt information -->
+            <address>
+                <p>Sidan är gjord av <span>Anton Ekström</span></p>
+                <div id="contact-info">
+                    <a href="mailto:anton.ekstrom@elev.kungsbacka.se">Mail</a>
+                    <a href="mailto:anton.e.ekstrom@gmail.com">Andra mail</a>
+                </div>
+            </address>
+        </footer>
+    </body>
+</html>

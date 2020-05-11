@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>Anton</title>
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="js/javascript.js"></script>
+    <script src="js/xml.js"></script>
+</head>
+
+<body>
+    <div id="picture">
+        <div class="imagetext">
+            <div id="titlediv" class="content center">
+                <h1 class="center">Välkommen till Anton's jättehäftiga hemsida</h1>
+                <a href="#listcontainer"><p class="center bubble hover" style="display: inline-block;">klicka här eller scrolla ner</p></a>
+            </div>  
+        </div>
+        <img src="assets/anton.jpg" id="headerimage">
+    </div>
+    <div id="pagenav" class="content">
+        <div><a href="html/dynamic.html"><li>WIP</li></a></div>
+    </div>
+    <div id="sidebar">
+        <h2>Navigation</h2>
+        <div><a href="#ommig"><li class="list">Om mig</li></a></div>
+        <div><a href="#vincent"><li class="list">Katter</li></a></div>
+        <div><a href="#projekt"><li class="list">Andra projekt</li></a></div>
+        <div><a href="#kod"><li class="list">Uppbyggnad</li></a></div>
+        <div><a href="#typsnitt"><li class="list">Typsnitt</li></a></div>
+    </div>
+    <div id="slidehandle"></div>
+    <div class="content" id="listcontainer">
+        <h2 class="title">Innehåll</h2>
+        <div class="minimize"></div>
+        <ul id="contentlist">
+            <div><a href="#ommig"><li class="list">Om mig</li></a></div>
+            <div><a href="#vincent"><li class="list">Katter</li></a></div>
+            <div><a href="#projekt"><li class="list">Andra projekt</li></a></div>
+            <div><a href="#kod"><li class="list">Uppbyggnad</li></a></div>
+            <div><a href="#typsnitt"><li class="list">Typsnitt</li></a></div>
+        </ul>
+    </div>
+    <div class="content" id="container1">
+        <h2 id="ommig" class="title">Det är jag som är Anton Ekström</h2>
+        <div class="minimize"></div>
+        <p>Jag är Anton och jag är en människa som heter Anton och har en hemsida. Jag har en familj som består av mina två
+        föräldrar som heter Dubravko och Anna. Jag själv heter Anton Martin Ekström. Jag föddes den första juni år 2001. I familjen finns det också tre stycken kattdjur, de heter Vincent, Alice och Cajsa.</p>
+    </div>
+    
+    <div class="content">
+        <div class="minimize"></div>
+        <h2 class="title" id="vincent">Vincent</h2>
+        <img class="incontent" src="assets/vincent.jpg">
+    </div>
+    <div class="content">
+        <div class="minimize"></div>
+        <h2 class="title">Alice</h2>
+        <img class="incontent" src="assets/alice.jpg">
+    </div>
+    <div class="content">
+        <div class="minimize"></div>
+        <h2 class="title">Kajsa</h2>
+        <img class="incontent" src="assets/cajsa.jpg">
+    </div>
+    
+    <div class="content">
+        <h2 id="projekt" class="title">Mina andra projekt</h2>
+        <div class="minimize"></div>
+        <p1>Här finns andra av mina projekt som jag har gjort:</p1>
+        <div class="items"><a href="https://github.com/zimbosaurus/adventureboi" target="_blank"><p class="center bubble hover">adventureboi</p></a></div>
+         <div class="items"><a href="https://github.com/zimbosaurus/epic_title_generator" target="_blank"><p class="center bubble hover">epic word generator</p></a></div>
+        <!--<div class="items"><a   href="https://minecraftadventure.000webhostapp.com" target="_blank"><p class="center bubble hover">minecraft adventure</p></a></div>-->
+    </div>
+    <div class="content">
+        <h2 id="kod" class="title">Uppbyggnad</h2>
+        <div class="minimize"></div>
+        <p1>Här är CSS koden för dessa "lådor" som texten och bilderna finns i på den här sidan.</p1>
+        <div class="code"><span class="selector">div.content</span> {<br>
+            &emsp;&emsp;<span class="property">border-radius</span>: <span class="value">25px</span>;<br>
+            &emsp;&emsp;<span class="property">background-color</span>: <span class="value">#efefef</span>;<br>
+            &emsp;&emsp;<span class="property">display:</span>: <span class="value">inline-block</span>;<br>
+            &emsp;&emsp;<span class="property">width</span>: <span class="value">50%</span>;<br>
+            &emsp;&emsp;<span class="property">margin-bottom</span>: <span class="value">20px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-top</span>: <span class="value">10px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-left</span>: <span class="value">50px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-right</span>: <span class="value">50px</span>;<br>
+            &emsp;&emsp;<span class="property">padding-bottom</span>: <span class="value">40px</span>;<br>}
+        </div>
+        <p>Ovanför ser du hur jag har fått till sidan på det här sättet. Jag använder mig mest av variationer av vit/grå men ibland mörkgrå för mer kontrast. Mest var den här kodbubblan till för att pröva att göra en sådan här mörk bubbla som jag hoppades skulle se rätt fint ut, och det blev rätt fint så jag är nöjd.</p>
+    </div>
+    <div class="content">
+        <h2 id="typsnitt" class="title">Typsnitt</h2>
+        <div class="minimize"></div>
+        <p1>Här finns de 3 typsnitten som jag använder på den här sidan:</p1>
+        <h2>Roboto Slab</h2>
+        <p>Roboto Slab använder jag för subtitlar i bubblor. Jag har "bäddat in" det här typsnittet från Google Fonts som du 
+        hittar <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" class="intextlink">här</a>.</p>
+        <h1 style="margin: 5px;">Calibri</h1>
+        <p>Calibri är ett fint typsnitt som jag använder för titlar, brödtext, listor och länkar. Den kommer inbyggt i Windows. 
+        (Om du inte har windows så kan det vara så att calibri inte är tillgänglig, och därför är ersatt med ett liknande typsnitt.)</p>
+        <p id="monospace">Monospace</p>
+        <p>Monospace är av typen Sans-Serif och kommer också med Windows. Den är tydlig och enkel att läsa, så därför använder 
+        jag den för kod bitar.</p>
+    </div>
+    <div class="singlecontent codetitle">
+        <h2 class="singlecontent codetitle">Javascript och jQuery</h2>
+        <p class="codedescription">Script för navigationsmenyn till vänster.</p>
+    </div>
+    
+    <div class="codecontent"><p class="codetext">$(<span class="value">"#slidehandle"</span>).<span class="property">click</span>(
+           <span class="keyword">function</span>() {<br>
+           &emsp;&emsp;<span class="keyword">if</span> (<span class="property">sidebar_visible</span> == 
+           <span class="value">true</span>) {<br>
+           &emsp;&emsp;&emsp;&emsp;<span class="property">sidebar_visible</span> = <span class="value">false</span>;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#sidebar"</span>).<span class="property">animate</span>({"left" : -sidebar_width}) ;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#slidehandle"</span>).<span class="property">animate</span>({"left" : "0"}) ;<br>
+           &emsp;&emsp;} <span class="keyword">else</span> {<br>
+           &emsp;&emsp;&emsp;&emsp;<span class="property">sidebar_visible</span> = <span class="value">true</span>;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#sidebar"</span>).<span class="property">animate</span>({"left" : "0"}) ;<br>
+           &emsp;&emsp;&emsp;&emsp;$(<span class="value">"#slidehandle"</span>).<span class="property">animate</span>({"left" : sidebar_width}) ;<br>
+            }
+        });</p>
+    </div>
+    
+</body>

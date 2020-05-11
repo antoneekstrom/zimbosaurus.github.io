@@ -1,9 +1,0 @@
-<page>
-    <head>
-        <banner src="../assets/mushforest.png"></banner>
-    </head>
-    
-    <content>
-        <title id="Välkommen">Hej hej välkommen till svampskogen.</title>
-    </content>
-</page>
